@@ -1,0 +1,66 @@
+{
+  "secciones": [
+    {
+      "id": "coleccion",
+      "titulo": "Colección nueva",
+      "items": [
+        {
+          "id": "coleccion/actitud-que-inspira",
+          "titulo": "Actitud que Inspira",
+          "archivo": "coleccion/01_Actitud-que-Inspira.pdf",
+          "tipo": "pdf",
+          "bytes": 8262898,
+          "portada": "portadas/coleccion__01-actitud-que-inspira.jpg",
+          "paginas": 62
+        },
+        {
+          "id": "coleccion/denim-con-actitud",
+          "titulo": "Denim con Actitud",
+          "archivo": "coleccion/02_Denim-con-Actitud.pdf",
+          "tipo": "pdf",
+          "bytes": 10216754,
+          "portada": "portadas/coleccion__02-denim-con-actitud.jpg",
+          "paginas": 56
+        },
+        {
+          "id": "coleccion/coleccion-2026",
+          "titulo": "Colección 2026",
+          "archivo": "coleccion/03_Coleccion-2026.pdf",
+          "tipo": "pdf",
+          "bytes": 6543228,
+          "portada": "portadas/coleccion__03-coleccion-2026.jpg",
+          "paginas": 32
+        }
+      ]
+    },
+    {
+      "id": "promociones",
+      "titulo": "Promociones",
+      "items": [
+        {
+          "id": "promociones/promociones-a",
+          "titulo": "Promociones A",
+          "archivo": "promociones/01_Promociones-A.pdf",
+          "tipo": "pdf",
+          "bytes": 6233103,
+          "portada": "portadas/promociones__01-promociones-a.jpg",
+          "paginas": 42
+        },
+        {
+          "id": "promociones/promociones-b",
+          "titulo": "Promociones B",
+          "archivo": "promociones/02_Promociones-B.pdf",
+          "tipo": "pdf",
+          "bytes": 4608907,
+          "portada": "portadas/promociones__02-promociones-b.jpg",
+          "paginas": 34
+        }
+      ]
+    },
+    {
+      "id": "precios",
+      "titulo": "Precios",
+      "items": []
+    }
+  ]
+}
