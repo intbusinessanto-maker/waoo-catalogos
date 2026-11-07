@@ -1,0 +1,126 @@
+<!-- Waoo Jeans · /catalogos/ · Lee todo desde github.com/intbusinessanto-maker/waoo-catalogos (manifest.json). No editar en WordPress: editar este archivo y republicar. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.wc{--ink:#25292B;--pink:#C2185B;--pink-d:#A0144B;--soft:#F5F5F5;--sand:#D1A280;--line:#E4E2DF;font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);max-width:1180px;margin:0 auto;padding:28px 18px 64px;box-sizing:border-box}
+.wc *{box-sizing:border-box}
+.wc h1,.wc h2,.wc h3{font-family:"IBM Plex Sans",system-ui,sans-serif;letter-spacing:-.01em;margin:0}
+.wc-hero{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.wc-hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:700;line-height:1.05}
+.wc-hero p{margin:8px 0 0;font-size:16px;color:#55595B;max-width:560px}
+.wc-tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:22px}
+.wc-tab{appearance:none;border:0;background:none;font:600 15px "IBM Plex Sans",sans-serif;color:#6B6F71;padding:12px 4px;margin-right:14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.wc-tab[aria-selected=true]{color:var(--ink);border-color:var(--pink)}
+.wc-note{background:var(--soft);border-left:3px solid var(--sand);padding:12px 14px;font-size:14px;margin:0 0 18px;border-radius:2px}
+.wc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.wc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s}
+.wc-card:hover{box-shadow:0 10px 28px rgba(37,41,43,.12);transform:translateY(-2px)}
+.wc-cover{aspect-ratio:3/4;background:var(--soft);overflow:hidden}
+.wc-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.wc-cbody{padding:14px 14px 16px;display:flex;flex-direction:column;gap:4px}
+.wc-cbody h3{font-size:18px;font-weight:600}
+.wc-meta{font-size:13px;color:#6B6F71}
+.wc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px "IBM Plex Sans",sans-serif;padding:13px 20px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;line-height:1}
+.wc-btn--wa{background:var(--pink);color:#fff}.wc-btn--wa:hover{background:var(--pink-d);color:#fff}
+.wc-btn--ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}.wc-btn--ghost:hover{border-color:var(--ink);color:var(--ink)}
+.wc-btn svg{width:18px;height:18px;flex:none}
+.wc-viewer-top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.wc-back{font:600 14px "IBM Plex Sans",sans-serif;color:#6B6F71;text-decoration:none}.wc-back:hover{color:var(--ink)}
+.wc-vtitle{font-size:clamp(20px,3vw,28px);font-weight:700}
+.wc-vact{display:flex;gap:8px;flex-wrap:wrap}
+.wc-pages{display:flex;flex-direction:column;align-items:center;gap:14px}
+.wc-page{width:100%;max-width:820px;background:var(--soft);border-radius:4px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.wc-page canvas,.wc-page img{display:block;width:100%;height:auto}
+.wc-progress{max-width:820px;width:100%;margin:30px auto;text-align:center;font-size:14px;color:#6B6F71}
+.wc-bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:10px}.wc-bar i{display:block;height:100%;width:0;background:var(--pink);transition:width .2s}
+.wc-empty{padding:28px;background:var(--soft);border-radius:6px;text-align:center}
+.wc-empty p{margin:0 0 16px}
+.wc-sticky{display:none}
+@media (max-width:700px){.wc{padding-top:18px}.wc-grid{grid-template-columns:repeat(2,1fr);gap:12px}.wc-cbody{padding:10px}.wc-cbody h3{font-size:15px}.wc-viewer-top .wc-vact{display:none}.wc-sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}.wc-sticky .wc-btn{flex:1;box-shadow:0 8px 24px rgba(0,0,0,.18)}}
+</style>
+<div class="wc" id="wc">
+  <div class="wc-progress">Cargando catálogos…</div>
+</div>
+<script>
+(function(){
+  var REPO='https://raw.githubusercontent.com/intbusinessanto-maker/waoo-catalogos/main/';
+  var WA='573217837919';
+  var root=document.getElementById('wc');
+  var ICON_WA='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>';
+  var ICON_DL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>';
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function wa(text){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(text)}
+  function mb(b){return (b/1048576).toFixed(1).replace('.',',')+' MB'}
+  function qs(){var p=new URLSearchParams(location.search);return {c:p.get('c'),tab:p.get('tab')}}
+  function go(params){var u=new URL(location.href);u.search='';Object.keys(params).forEach(function(k){if(params[k])u.searchParams.set(k,params[k])});history.pushState({},'',u);render();window.scrollTo(0,root.getBoundingClientRect().top+window.scrollY-20)}
+  var M=null;
+  function load(){
+    // cache-buster cada 5 minutos
+    var v=Math.floor(Date.now()/300000);
+    fetch(REPO+'manifest.json?v='+v).then(function(r){return r.json()}).then(function(j){M=j;render()}).catch(function(){root.innerHTML='<div class="wc-empty"><p>No pudimos cargar los catálogos en este momento.</p><a class="wc-btn wc-btn--wa" href="'+wa('Hola, quiero ver los catálogos de Waoo Jeans.')+'">'+ICON_WA+'Pídelos por WhatsApp</a></div>'});
+  }
+  function findItem(id){for(var i=0;i<M.secciones.length;i++){var s=M.secciones[i];for(var k=0;k<s.items.length;k++){if(s.items[k].id===id)return {sec:s,item:s.items[k]}}}return null}
+  function render(){
+    var q=qs();
+    if(q.c){var f=findItem(q.c);if(f)return viewer(f.sec,f.item)}
+    hub(q.tab||'coleccion');
+  }
+  function hub(tab){
+    document.title='Catálogos | Waoo Jeans';
+    var secs=M.secciones;
+    var h='<div class="wc-hero"><div><h1>Catálogos Waoo Jeans</h1><p>Mira la colección nueva, las promociones y los precios. Elige tus referencias y haz tu pedido por WhatsApp.</p></div>'+
+      '<a class="wc-btn wc-btn--wa" href="'+wa('Hola, vengo de la página de catálogos y quiero hacer un pedido.')+'">'+ICON_WA+'Pedir por WhatsApp</a></div>';
+    h+='<div class="wc-tabs" role="tablist">';
+    secs.forEach(function(s){h+='<button class="wc-tab" role="tab" aria-selected="'+(s.id===tab)+'" data-tab="'+s.id+'">'+esc(s.titulo)+'</button>'});
+    h+='</div>';
+    var s=secs.filter(function(x){return x.id===tab})[0]||secs[0];
+    if(s.id==='promociones')h+='<p class="wc-note">Colecciones anteriores con precio especial. Unidades limitadas.</p>';
+    if(s.id==='precios')h+='<p class="wc-note">Precios por mayor desde 6 unidades. Los precios no incluyen flete.</p>';
+    if(!s.items.length){
+      h+='<div class="wc-empty"><p>'+(s.id==='precios'?'Te enviamos la lista de precios actualizada por WhatsApp.':'Muy pronto publicamos esta sección.')+'</p><a class="wc-btn wc-btn--wa" href="'+wa(s.id==='precios'?'Hola, quiero la lista de precios de Waoo Jeans.':'Hola, quiero ver los catálogos de Waoo Jeans.')+'">'+ICON_WA+(s.id==='precios'?'Pedir lista de precios':'Escríbenos')+'</a></div>';
+    } else {
+      h+='<div class="wc-grid">';
+      s.items.forEach(function(it){
+        var meta=it.tipo==='pdf'?(it.paginas+' páginas · '+mb(it.bytes)):'Imagen';
+        h+='<a class="wc-card" href="?c='+encodeURIComponent(it.id)+'" data-c="'+esc(it.id)+'"><div class="wc-cover"><img loading="lazy" src="'+REPO+it.portada+'" alt="'+esc(it.titulo)+'"></div><div class="wc-cbody"><h3>'+esc(it.titulo)+'</h3><span class="wc-meta">'+meta+'</span></div></a>';
+      });
+      h+='</div>';
+    }
+    root.innerHTML=h;
+    root.querySelectorAll('.wc-tab').forEach(function(b){b.onclick=function(){go({tab:b.dataset.tab})}});
+    root.querySelectorAll('.wc-card').forEach(function(a){a.onclick=function(e){e.preventDefault();go({c:a.dataset.c})}});
+  }
+  var pdfjsReady=null;
+  function pdfjs(){
+    if(pdfjsReady)return pdfjsReady;
+    pdfjsReady=new Promise(function(res,rej){var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';s.onload=function(){window.pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';res(window.pdfjsLib)};s.onerror=rej;document.head.appendChild(s)});
+    return pdfjsReady;
+  }
+  function viewer(sec,it){
+    document.title=it.titulo+' | Catálogos Waoo Jeans';
+    var url=REPO+it.archivo;
+    var msg='Hola, estoy viendo el catálogo "'+it.titulo+'" en la web y quiero hacer un pedido.';
+    var acts='<a class="wc-btn wc-btn--ghost" href="'+url+'" download>'+ICON_DL+'Descargar</a><a class="wc-btn wc-btn--wa" href="'+wa(msg)+'">'+ICON_WA+'Pedir por WhatsApp</a>';
+    root.innerHTML='<div class="wc-viewer-top"><div><a class="wc-back" href="?tab='+sec.id+'" data-tab="'+sec.id+'">← '+esc(sec.titulo)+'</a><h1 class="wc-vtitle">'+esc(it.titulo)+'</h1></div><div class="wc-vact">'+acts+'</div></div>'+
+      '<div class="wc-pages" id="wc-pages"><div class="wc-progress">Abriendo catálogo…<div class="wc-bar"><i id="wc-bar"></i></div></div></div>'+
+      '<div class="wc-sticky">'+acts+'</div>';
+    root.querySelector('.wc-back').onclick=function(e){e.preventDefault();go({tab:sec.id})};
+    var pages=document.getElementById('wc-pages');
+    if(it.tipo!=='pdf'){pages.innerHTML='<div class="wc-page"><img src="'+url+'" alt="'+esc(it.titulo)+'"></div>';return}
+    pdfjs().then(function(lib){
+      var task=lib.getDocument({url:url,disableStream:true,disableAutoFetch:true});
+      task.onProgress=function(p){if(p.total){var b=document.getElementById('wc-bar');if(b)b.style.width=Math.round(p.loaded/p.total*100)+'%'}};
+      return task.promise;
+    }).then(function(doc){
+      pages.innerHTML='';
+      var slots=[];
+      for(var i=1;i<=doc.numPages;i++){var d=document.createElement('div');d.className='wc-page';d.dataset.n=i;d.style.aspectRatio='3/4';pages.appendChild(d);slots.push(d)}
+      var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(!en.isIntersecting)return;var d=en.target;io.unobserve(d);
+        doc.getPage(+d.dataset.n).then(function(pg){var w=d.clientWidth||800;var vp1=pg.getViewport({scale:1});var dpr=Math.min(window.devicePixelRatio||1,2);var vp=pg.getViewport({scale:(w/vp1.width)*dpr});var c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;d.style.aspectRatio=vp1.width+'/'+vp1.height;d.appendChild(c);return pg.render({canvasContext:c.getContext('2d'),viewport:vp}).promise})})},{rootMargin:'800px 0px'});
+      slots.forEach(function(s){io.observe(s)});
+    }).catch(function(){pages.innerHTML='<div class="wc-empty"><p>No pudimos mostrar el catálogo aquí. Descárgalo o pídelo por WhatsApp.</p>'+acts+'</div>'});
+  }
+  window.addEventListener('popstate',function(){if(M)render()});
+  load();
+})();
+</script>
